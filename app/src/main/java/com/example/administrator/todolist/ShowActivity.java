@@ -45,6 +45,7 @@ public class ShowActivity extends AppCompatActivity {
         dbAdapter=new DbAdapter(getBaseContext());
         Cursor cursor=dbAdapter.queryById(index);
         index = cursor.getInt(0);
+        tvtime.setText(cursor.getString(1));
         tvmemo.setText(cursor.getString(2));
         s_bg.setBackgroundColor(Color.parseColor("#"+cursor.getString(4)));
     }
